@@ -11,6 +11,7 @@ namespace Laboratorium3
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<IContactService, MemoryContactServices>();
+            builder.Services.AddSingleton<IAlbumService, MemoryAlbumServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
