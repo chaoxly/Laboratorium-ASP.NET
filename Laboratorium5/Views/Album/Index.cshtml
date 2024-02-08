@@ -1,0 +1,55 @@
+﻿@model Dictionary<int, Laboratorium5.Models.Album>
+@{
+    ViewData["Title"] = "Spis Albumów";
+}
+<h1>Spis Albumów</h1>
+<a class="btn btn-primary" asp-controller="Album" asp-action="Create">Dodaj Album</a>
+<a class="btn btn-primary" asp-controller="Album" asp-action="CreateSong">Dodaj Piosenke</a>
+<a class="btn btn-primary" asp-controller="Album" asp-action="CreateApi">Dodaj album api</a>
+<a class="btn btn-primary" asp-controller="Album" asp-action="PagedIndex">Stronnicowanie</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th>
+                Notowania
+            </th>
+            <th>
+                Łączny czas albumu
+            </th>
+            <th>
+                Akcje
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>
+                    @album.Value.Nazwa
+                </td>
+                <td>
+                    @album.Value.Notowanie
+                </td>
+                <td>
+                    @{
+                        TimeSpan sumaCzasu = TimeSpan.Zero;
+                        foreach (var piosenka in album.Value.Piosenki)
+                        {
+                            sumaCzasu += piosenka.Czas_trwania;
+                        }
+                    }
+                    @sumaCzasu.ToString(@"hh\:mm\:ss")
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@album.Value.Id">Edytuj</a>
+                    <a asp-action="Details" asp-route-id="@album.Value.Id">Szczegóły</a>
+                    <a asp-action="Delete" asp-route-id="@album.Value.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

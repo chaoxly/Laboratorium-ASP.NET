@@ -1,0 +1,39 @@
+﻿@model Laboratorium5.Models.Piosenka
+@using Laboratorium5.Models
+@inject IPiosenkaService PiosenkaService
+@{
+    ViewData["Title"] = "Dodaj piosenkę";
+}
+
+<h2>Dodaj piosenkę</h2>
+
+<form asp-action="CreateSong" method="post">
+   
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="AlbumId">Album</label>
+        <select asp-for="AlbumId" class="form-control" asp-items="@ViewBag.Albums"></select>
+        <span asp-validation-for="AlbumId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tytul">Tytuł</label>
+        <input asp-for="Tytul" class="form-control" />
+        <span asp-validation-for="Tytul" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Czas_trwania">Czas trwania</label>
+        <input asp-for="Czas_trwania" class="form-control" placeholder="hh:mm:ss" />
+        <span asp-validation-for="Czas_trwania" class="text-danger"></span>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+
+    <a asp-controller="Album" asp-action="Index">
+        <button type="button" class="btn btn-secondary">Powrót</button>
+    </a>
+</form>

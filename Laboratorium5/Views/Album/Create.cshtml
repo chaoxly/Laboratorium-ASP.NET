@@ -1,0 +1,41 @@
+﻿@using Laboratorium5.Models
+@model Laboratorium5.Models.Album
+@{
+    ViewData["Title"] = "Dodaj album";
+}
+
+<h2>Dodaj album</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Nazwa">Nazwa</label>
+        <input asp-for="Nazwa" class="form-control" />
+        <span asp-validation-for="Nazwa" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Zespol">Zespół</label>
+        <input asp-for="Zespol" class="form-control" />
+        <span asp-validation-for="Zespol" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Notowanie">Notowanie</label>
+        <input asp-for="Notowanie" class="form-control" />
+        <span asp-validation-for="Notowanie" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Data_wydania">Data wydania</label>
+        <input asp-for="Data_wydania" class="form-control" />
+        <span asp-validation-for="Data_wydania" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+
+    <a asp-controller="Album" asp-action="Index">
+        <button type="button" class="btn btn-secondary">Powrót</button>
+    </a>
+</form>
