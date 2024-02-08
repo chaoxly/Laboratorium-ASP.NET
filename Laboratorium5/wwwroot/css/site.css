@@ -18,5 +18,43 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+.btn {
+    background-color: DarkGray;
+    border-color: white;
+}
+
+
+#logout {
+    
+    background-color: transparent; 
+ 
+    color: black;
+}
+
+    #logout:hover {
+        
+        background-color: azure;
+        color: red;
+    }
+.link-style {
+    color: #007bff; 
+    text-decoration: none; 
+}
+
+.link-style:hover {
+        color: #00CED1 
+ }

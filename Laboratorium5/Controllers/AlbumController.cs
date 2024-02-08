@@ -182,5 +182,26 @@ namespace Laboratorium5.Controllers
             return View(pagedResult);
         }
 
+        [AllowAnonymous]
+        public IActionResult SearchSongs()
+        {
+            var piosenki = _piosenkaService.FindAll();
+            return View(piosenki);
+        }
+
+        [HttpPost]
+        public IActionResult Polub(int piosenkaId)
+        {
+            var piosenka = _piosenkaService.FindById(piosenkaId);
+            if (piosenka == null)
+            {
+                return NotFound();
+            }
+
+            _albumService.IncrementNotowanie(piosenka.AlbumId);
+
+            return RedirectToAction("SearchSongs");
+        }
+
     }
 }

@@ -28,15 +28,25 @@ namespace Laboratorium5
 
             modelBuilder.Entity<Album>().HasData(
                 new Album { Id = 1, Nazwa = "Jeszcze 5 minut", Zespol = "Kizo", Notowanie = 4124124, Data_wydania = new DateTime(2021, 11, 15) },
-                new Album { Id = 2, Nazwa = "Uczta", Zespol = "Sanah", Notowanie = 52323423, Data_wydania = new DateTime(2022, 08, 15) }
+                new Album { Id = 2, Nazwa = "Uczta", Zespol = "Sanah", Notowanie = 52323423, Data_wydania = new DateTime(2022, 08, 15) },
+                new Album { Id = 3, Nazwa = "W samo południe", Zespol = "Reto", Notowanie = 63223423, Data_wydania = new DateTime(2020, 05, 15) },
+                new Album { Id = 4, Nazwa = "Origins", Zespol = "Imagine Dragons", Notowanie = 4756454, Data_wydania = new DateTime(2018, 05, 15) },
+                new Album { Id = 5, Nazwa = "Evolve", Zespol = "Imagine Dragons", Notowanie = 82323423, Data_wydania = new DateTime(2017, 03, 15) },
+                new Album { Id = 6, Nazwa = "NightVisions", Zespol = "Imagine Dragons", Notowanie = 73223423, Data_wydania = new DateTime(2012, 02, 15) }
             );
 
             modelBuilder.Entity<Piosenka>().HasData(
-                new Piosenka { Id = 1, Tytul = "Piosenka 1", Czas_trwania = new TimeSpan(0, 3, 30), AlbumId = 1 },
-                new Piosenka { Id = 2, Tytul = "Piosenka 2", Czas_trwania = new TimeSpan(0, 4, 15), AlbumId = 1 },
-                new Piosenka { Id = 3, Tytul = "Piosenka 3", Czas_trwania = new TimeSpan(0, 3, 50), AlbumId = 1 },
-                new Piosenka { Id = 4, Tytul = "Piosenka 1", Czas_trwania = new TimeSpan(0, 3, 45), AlbumId = 2 },
-                new Piosenka { Id = 5, Tytul = "Piosenka 2", Czas_trwania = new TimeSpan(0, 4, 20), AlbumId = 2 }
+                new Piosenka { Id = 1, Tytul = "Disney", Czas_trwania = new TimeSpan(0, 3, 39), AlbumId = 1 },
+                new Piosenka { Id = 2, Tytul = "Z nadzieją", Czas_trwania = new TimeSpan(0, 2, 21), AlbumId = 1 },
+                new Piosenka { Id = 3, Tytul = "Forma", Czas_trwania = new TimeSpan(0, 3, 13), AlbumId = 1 },
+                new Piosenka { Id = 4, Tytul = "Szary świat", Czas_trwania = new TimeSpan(0, 3, 23), AlbumId = 2 },
+                new Piosenka { Id = 5, Tytul = "Ostatnia nadzieja", Czas_trwania = new TimeSpan(0, 3, 45), AlbumId = 2 },
+                new Piosenka { Id = 6, Tytul = "Billy Kid", Czas_trwania = new TimeSpan(0, 3, 0), AlbumId = 3 },
+                new Piosenka { Id = 7, Tytul = "Blask", Czas_trwania = new TimeSpan(0, 3, 31), AlbumId = 3 },
+                new Piosenka { Id = 8, Tytul = "BMW", Czas_trwania = new TimeSpan(0, 2, 26), AlbumId = 3 },
+                new Piosenka { Id = 9, Tytul = "Natural", Czas_trwania = new TimeSpan(0, 3, 09), AlbumId = 4 },
+                new Piosenka { Id = 10, Tytul = "Believer", Czas_trwania = new TimeSpan(0, 3, 24), AlbumId = 5 },
+                new Piosenka { Id = 11, Tytul = "Radioactive", Czas_trwania = new TimeSpan(0, 3, 06), AlbumId = 6 }
             );
 
             modelBuilder.Entity<Album>()

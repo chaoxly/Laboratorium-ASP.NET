@@ -6,7 +6,9 @@
             void DeleteById(Piosenka piosenka);
             Piosenka? FindById(int id);
             List<Piosenka> FindAll();
-          
+
+           
+
     }
     
 }

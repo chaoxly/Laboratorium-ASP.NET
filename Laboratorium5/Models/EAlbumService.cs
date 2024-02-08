@@ -52,5 +52,15 @@ namespace Laboratorium5.Models
             return new PagingList<Album>(albums, totalItems, page, size); 
         }
 
+        public void IncrementNotowanie(int albumId)
+        {
+            var album = _context.Albums.Find(albumId);
+            if (album != null)
+            {
+                album.Notowanie++;
+                _context.SaveChanges();
+            }
+        }
+
     }
 }

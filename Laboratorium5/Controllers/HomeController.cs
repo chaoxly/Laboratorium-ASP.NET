@@ -15,6 +15,7 @@ namespace Laboratorium5.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Visit"] = Response.HttpContext.Items[LastVisitCookie.CookieName];
             return View();
         }
 

@@ -201,7 +201,11 @@ namespace Laboratorium5.Migrations
                 values: new object[,]
                 {
                     { 1, new DateTime(2021, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Jeszcze 5 minut", 4124124, "Kizo" },
-                    { 2, new DateTime(2022, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Uczta", 52323423, "Sanah" }
+                    { 2, new DateTime(2022, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Uczta", 52323423, "Sanah" },
+                    { 3, new DateTime(2020, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "W samo południe", 63223423, "Reto" },
+                    { 4, new DateTime(2018, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Origins", 4756454, "Imagine Dragons" },
+                    { 5, new DateTime(2017, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Evolve", 82323423, "Imagine Dragons" },
+                    { 6, new DateTime(2012, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "NightVisions", 73223423, "Imagine Dragons" }
                 });
 
             migrationBuilder.InsertData(
@@ -209,8 +213,8 @@ namespace Laboratorium5.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "635039f1-ecea-47af-b061-7484f3972f4e", "635039f1-ecea-47af-b061-7484f3972f4e", "user", "USER" },
-                    { "f4403ff6-3c9c-47f0-bcf8-f23c2a098469", "f4403ff6-3c9c-47f0-bcf8-f23c2a098469", "admin", "ADMIN" }
+                    { "80fabf7c-b155-437b-a587-b16dae1cab5c", "80fabf7c-b155-437b-a587-b16dae1cab5c", "admin", "ADMIN" },
+                    { "bea5ea06-8d69-45bc-94c1-5b843eb8fba9", "bea5ea06-8d69-45bc-94c1-5b843eb8fba9", "user", "USER" }
                 });
 
             migrationBuilder.InsertData(
@@ -218,8 +222,8 @@ namespace Laboratorium5.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "56a827b2-4a86-4f89-9837-d3581ab791fc", 0, "01106d1a-5288-4b07-b00e-d6f3f08df9d2", "user@esei.edu.pl", true, false, null, "USER@WSEI.EDU.PL", "USER", "AQAAAAIAAYagAAAAEHghpNb+BfgRbS/GNEQ9pmCJbXa+MzJpGoXIgM0Ye5/aGKcL7Zh8pIpMLuuRtLquiw==", null, false, "783757a2-6d86-430a-aba8-6bbef0ce2429", false, "user" },
-                    { "9630ab96-f6d8-49fc-938f-24e87b8e82ef", 0, "5ae8bd54-f01f-466a-9600-e8fceb23a1d7", "adam@wsei.edu.pl", true, false, null, "ADAM@WSEI.EDU.PL", "ADMIN", "AQAAAAIAAYagAAAAEPG2FOAwO4+7f5M9yCNPFLhcoSWKyFIGtYMaKFs+OlLC1LCxACckc4jswWAqGmBIHw==", null, false, "4f9c2788-4802-4025-9dab-1a5d3749389c", false, "admin" }
+                    { "8046aaf2-32b1-47c9-a6aa-9522b6240b32", 0, "3fd57766-5922-4229-96f4-2b73b8fa2cc0", "adam@wsei.edu.pl", true, false, null, "ADAM@WSEI.EDU.PL", "ADMIN", "AQAAAAIAAYagAAAAEBq07H4WItGDRFaqAP5GTGjqQd8Pv0LDXhEVpn4BNONAArOeLU1V+4/WYcPseHjdCQ==", null, false, "3b565467-e765-4068-9b47-deb743c2d087", false, "admin" },
+                    { "bc7e0786-4d09-4595-aa48-53f7c27daf97", 0, "77e66244-947b-4136-85d8-062dc179183e", "user@esei.edu.pl", true, false, null, "USER@WSEI.EDU.PL", "USER", "AQAAAAIAAYagAAAAEE4h8ab1BuQ4Z9BkRwxWo2iQsjFttPR00XeyCHUfyjFGbyk/HkNSEBFCETr6ggVKUg==", null, false, "8957ba4a-40e2-488c-b74f-d88609301cc9", false, "user" }
                 });
 
             migrationBuilder.InsertData(
@@ -227,8 +231,8 @@ namespace Laboratorium5.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "635039f1-ecea-47af-b061-7484f3972f4e", "56a827b2-4a86-4f89-9837-d3581ab791fc" },
-                    { "f4403ff6-3c9c-47f0-bcf8-f23c2a098469", "9630ab96-f6d8-49fc-938f-24e87b8e82ef" }
+                    { "80fabf7c-b155-437b-a587-b16dae1cab5c", "8046aaf2-32b1-47c9-a6aa-9522b6240b32" },
+                    { "bea5ea06-8d69-45bc-94c1-5b843eb8fba9", "bc7e0786-4d09-4595-aa48-53f7c27daf97" }
                 });
 
             migrationBuilder.InsertData(
@@ -236,11 +240,17 @@ namespace Laboratorium5.Migrations
                 columns: new[] { "Id", "AlbumId", "Czas_trwania", "Tytul" },
                 values: new object[,]
                 {
-                    { 1, 1, new TimeSpan(0, 0, 3, 30, 0), "Piosenka 1" },
-                    { 2, 1, new TimeSpan(0, 0, 4, 15, 0), "Piosenka 2" },
-                    { 3, 1, new TimeSpan(0, 0, 3, 50, 0), "Piosenka 3" },
-                    { 4, 2, new TimeSpan(0, 0, 3, 45, 0), "Piosenka 1" },
-                    { 5, 2, new TimeSpan(0, 0, 4, 20, 0), "Piosenka 2" }
+                    { 1, 1, new TimeSpan(0, 0, 3, 39, 0), "Disney" },
+                    { 2, 1, new TimeSpan(0, 0, 2, 21, 0), "Z nadzieją" },
+                    { 3, 1, new TimeSpan(0, 0, 3, 13, 0), "Forma" },
+                    { 4, 2, new TimeSpan(0, 0, 3, 23, 0), "Szary świat" },
+                    { 5, 2, new TimeSpan(0, 0, 3, 45, 0), "Ostatnia nadzieja" },
+                    { 6, 3, new TimeSpan(0, 0, 3, 0, 0), "Billy Kid" },
+                    { 7, 3, new TimeSpan(0, 0, 3, 31, 0), "Blask" },
+                    { 8, 3, new TimeSpan(0, 0, 2, 26, 0), "BMW" },
+                    { 9, 4, new TimeSpan(0, 0, 3, 9, 0), "Natural" },
+                    { 10, 5, new TimeSpan(0, 0, 3, 24, 0), "Believer" },
+                    { 11, 6, new TimeSpan(0, 0, 3, 6, 0), "Radioactive" }
                 });
 
             migrationBuilder.CreateIndex(

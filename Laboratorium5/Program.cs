@@ -43,7 +43,7 @@ namespace Laboratorium5
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseMiddleware<LastVisitCookie>();
 
 
             app.UseAuthentication();                                 // dodaæ
@@ -56,7 +56,10 @@ namespace Laboratorium5
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
+            app.MapControllerRoute(
+                name: "polub",
+                pattern: "Album/Polub",
+                 defaults: new { controller = "Album", action = "Polub" });
             app.Run();
         }
     }

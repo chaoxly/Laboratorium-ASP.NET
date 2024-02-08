@@ -57,6 +57,38 @@ namespace Laboratorium5.Migrations
                             Nazwa = "Uczta",
                             Notowanie = 52323423,
                             Zespol = "Sanah"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Data_wydania = new DateTime(2020, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nazwa = "W samo południe",
+                            Notowanie = 63223423,
+                            Zespol = "Reto"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Data_wydania = new DateTime(2018, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nazwa = "Origins",
+                            Notowanie = 4756454,
+                            Zespol = "Imagine Dragons"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Data_wydania = new DateTime(2017, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nazwa = "Evolve",
+                            Notowanie = 82323423,
+                            Zespol = "Imagine Dragons"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Data_wydania = new DateTime(2012, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nazwa = "NightVisions",
+                            Notowanie = 73223423,
+                            Zespol = "Imagine Dragons"
                         });
                 });
 
@@ -87,36 +119,78 @@ namespace Laboratorium5.Migrations
                         {
                             Id = 1,
                             AlbumId = 1,
-                            Czas_trwania = new TimeSpan(0, 0, 3, 30, 0),
-                            Tytul = "Piosenka 1"
+                            Czas_trwania = new TimeSpan(0, 0, 3, 39, 0),
+                            Tytul = "Disney"
                         },
                         new
                         {
                             Id = 2,
                             AlbumId = 1,
-                            Czas_trwania = new TimeSpan(0, 0, 4, 15, 0),
-                            Tytul = "Piosenka 2"
+                            Czas_trwania = new TimeSpan(0, 0, 2, 21, 0),
+                            Tytul = "Z nadzieją"
                         },
                         new
                         {
                             Id = 3,
                             AlbumId = 1,
-                            Czas_trwania = new TimeSpan(0, 0, 3, 50, 0),
-                            Tytul = "Piosenka 3"
+                            Czas_trwania = new TimeSpan(0, 0, 3, 13, 0),
+                            Tytul = "Forma"
                         },
                         new
                         {
                             Id = 4,
                             AlbumId = 2,
-                            Czas_trwania = new TimeSpan(0, 0, 3, 45, 0),
-                            Tytul = "Piosenka 1"
+                            Czas_trwania = new TimeSpan(0, 0, 3, 23, 0),
+                            Tytul = "Szary świat"
                         },
                         new
                         {
                             Id = 5,
                             AlbumId = 2,
-                            Czas_trwania = new TimeSpan(0, 0, 4, 20, 0),
-                            Tytul = "Piosenka 2"
+                            Czas_trwania = new TimeSpan(0, 0, 3, 45, 0),
+                            Tytul = "Ostatnia nadzieja"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AlbumId = 3,
+                            Czas_trwania = new TimeSpan(0, 0, 3, 0, 0),
+                            Tytul = "Billy Kid"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AlbumId = 3,
+                            Czas_trwania = new TimeSpan(0, 0, 3, 31, 0),
+                            Tytul = "Blask"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AlbumId = 3,
+                            Czas_trwania = new TimeSpan(0, 0, 2, 26, 0),
+                            Tytul = "BMW"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AlbumId = 4,
+                            Czas_trwania = new TimeSpan(0, 0, 3, 9, 0),
+                            Tytul = "Natural"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AlbumId = 5,
+                            Czas_trwania = new TimeSpan(0, 0, 3, 24, 0),
+                            Tytul = "Believer"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AlbumId = 6,
+                            Czas_trwania = new TimeSpan(0, 0, 3, 6, 0),
+                            Tytul = "Radioactive"
                         });
                 });
 
@@ -148,15 +222,15 @@ namespace Laboratorium5.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f4403ff6-3c9c-47f0-bcf8-f23c2a098469",
-                            ConcurrencyStamp = "f4403ff6-3c9c-47f0-bcf8-f23c2a098469",
+                            Id = "80fabf7c-b155-437b-a587-b16dae1cab5c",
+                            ConcurrencyStamp = "80fabf7c-b155-437b-a587-b16dae1cab5c",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "635039f1-ecea-47af-b061-7484f3972f4e",
-                            ConcurrencyStamp = "635039f1-ecea-47af-b061-7484f3972f4e",
+                            Id = "bea5ea06-8d69-45bc-94c1-5b843eb8fba9",
+                            ConcurrencyStamp = "bea5ea06-8d69-45bc-94c1-5b843eb8fba9",
                             Name = "user",
                             NormalizedName = "USER"
                         });
@@ -251,33 +325,33 @@ namespace Laboratorium5.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9630ab96-f6d8-49fc-938f-24e87b8e82ef",
+                            Id = "8046aaf2-32b1-47c9-a6aa-9522b6240b32",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5ae8bd54-f01f-466a-9600-e8fceb23a1d7",
+                            ConcurrencyStamp = "3fd57766-5922-4229-96f4-2b73b8fa2cc0",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPG2FOAwO4+7f5M9yCNPFLhcoSWKyFIGtYMaKFs+OlLC1LCxACckc4jswWAqGmBIHw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBq07H4WItGDRFaqAP5GTGjqQd8Pv0LDXhEVpn4BNONAArOeLU1V+4/WYcPseHjdCQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4f9c2788-4802-4025-9dab-1a5d3749389c",
+                            SecurityStamp = "3b565467-e765-4068-9b47-deb743c2d087",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = "56a827b2-4a86-4f89-9837-d3581ab791fc",
+                            Id = "bc7e0786-4d09-4595-aa48-53f7c27daf97",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "01106d1a-5288-4b07-b00e-d6f3f08df9d2",
+                            ConcurrencyStamp = "77e66244-947b-4136-85d8-062dc179183e",
                             Email = "user@esei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@WSEI.EDU.PL",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHghpNb+BfgRbS/GNEQ9pmCJbXa+MzJpGoXIgM0Ye5/aGKcL7Zh8pIpMLuuRtLquiw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEE4h8ab1BuQ4Z9BkRwxWo2iQsjFttPR00XeyCHUfyjFGbyk/HkNSEBFCETr6ggVKUg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "783757a2-6d86-430a-aba8-6bbef0ce2429",
+                            SecurityStamp = "8957ba4a-40e2-488c-b74f-d88609301cc9",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
@@ -347,13 +421,13 @@ namespace Laboratorium5.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "9630ab96-f6d8-49fc-938f-24e87b8e82ef",
-                            RoleId = "f4403ff6-3c9c-47f0-bcf8-f23c2a098469"
+                            UserId = "8046aaf2-32b1-47c9-a6aa-9522b6240b32",
+                            RoleId = "80fabf7c-b155-437b-a587-b16dae1cab5c"
                         },
                         new
                         {
-                            UserId = "56a827b2-4a86-4f89-9837-d3581ab791fc",
-                            RoleId = "635039f1-ecea-47af-b061-7484f3972f4e"
+                            UserId = "bc7e0786-4d09-4595-aa48-53f7c27daf97",
+                            RoleId = "bea5ea06-8d69-45bc-94c1-5b843eb8fba9"
                         });
                 });
 

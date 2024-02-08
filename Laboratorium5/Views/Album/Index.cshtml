@@ -7,6 +7,7 @@
 <a class="btn btn-primary" asp-controller="Album" asp-action="CreateSong">Dodaj Piosenke</a>
 <a class="btn btn-primary" asp-controller="Album" asp-action="CreateApi">Dodaj album api</a>
 <a class="btn btn-primary" asp-controller="Album" asp-action="PagedIndex">Stronnicowanie</a>
+<a class="btn btn-primary" asp-controller="Album" asp-action="SearchSongs">Lista Piosenek</a>
 <table class="table">
     <thead>
         <tr>
@@ -45,9 +46,9 @@
                     @sumaCzasu.ToString(@"hh\:mm\:ss")
                 </td>
                 <td>
-                    <a asp-action="Update" asp-route-id="@album.Value.Id">Edytuj</a>
-                    <a asp-action="Details" asp-route-id="@album.Value.Id">Szczegóły</a>
-                    <a asp-action="Delete" asp-route-id="@album.Value.Id">Usuń</a>
+                    <a class="link-style" asp-action="Update" asp-route-id="@album.Value.Id">Edytuj</a>
+                    <a class="link-style" asp-action="Details" asp-route-id="@album.Value.Id">Szczegóły</a>
+                    <a class="link-style" asp-action="Delete" asp-route-id="@album.Value.Id">Usuń</a>
                 </td>
             </tr>
         }

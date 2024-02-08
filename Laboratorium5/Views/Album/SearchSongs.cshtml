@@ -1,0 +1,93 @@
+﻿@model List<Laboratorium5.Models.Piosenka>
+
+@{
+    ViewData["Title"] = "Wyszukiwanie Piosenek";
+}
+
+<h1>Wyszukiwanie Piosenek</h1>
+
+<input type="text" id="searchInput" placeholder="Wyszukaj piosenkę..." oninput="searchItems()" />
+
+<select id="searchType">
+    <option value="piosenka">Piosenka</option>
+    <option value="album">Album</option>
+</select>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tytuł</th>
+                <th>Album</th>
+                <th>Czas trwania</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody id="songTableBody">
+            @foreach (var piosenka in Model)
+            {
+                <tr>
+                    <td>@piosenka.Tytul</td>
+                    <td><a class="link-style" asp-controller="Album" asp-action="Details" asp-route-id="@piosenka.AlbumId">@piosenka.Album.Nazwa</a></td>
+                    <td>@piosenka.Czas_trwania.ToString(@"hh\:mm\:ss")</td>
+                    <td>
+                        <button id="polubButton_@piosenka.Id" class="btn btn-primary" onclick="polub(@piosenka.Id)">Polub</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Brak dostępnych piosenek.</p>
+}
+
+@section scripts {
+    <script>
+        function searchItems() {
+            var input, filter, table, tr, td, i, txtValue, searchType;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("songTableBody");
+            tr = table.getElementsByTagName("tr");
+            searchType = document.getElementById("searchType").value;
+            for (i = 0; i < tr.length; i++) {
+                if (searchType === "piosenka") {
+                    td = tr[i].getElementsByTagName("td")[0];
+                } else {
+                    td = tr[i].getElementsByTagName("td")[1]; // Change to 1 for album column
+                }
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function polub(piosenkaId) {
+            // Wywołaj akcję kontrolera, aby zwiększyć liczbę notowań dla wybranej piosenki
+            $.ajax({
+                url: "/Album/Polub",
+                type: "POST",
+                data: { piosenkaId: piosenkaId },
+                success: function () {
+                    // Znajdź przycisk "Polub" i dezaktywuj go, zmieniając jego tekst
+                    var button = document.getElementById("polubButton_" + piosenkaId);
+                    if (button) {
+                        button.disabled = true;
+                        button.innerText = "Polubiono";
+                    }
+                },
+                error: function () {
+                    alert("Wystąpił błąd podczas próby polubienia piosenki. Musisz być zalogowany!");
+                }
+            });
+        }
+    </script>
+}

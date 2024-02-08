@@ -8,5 +8,6 @@
         Album? FindById(int id);
         List<Album> FindAll();
         PagingList<Album> FindPage(int page, int size);
+        void IncrementNotowanie(int albumId);
     }
 }
