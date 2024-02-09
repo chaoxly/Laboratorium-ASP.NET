@@ -19,7 +19,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #f0f0f0, #888);
+    color: black;
 }
 
 .container {
