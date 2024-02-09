@@ -43,7 +43,7 @@ namespace Laboratorium5.Controllers
             }
             return View(model);
         }
-
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult CreateSong(int albumId)
         {
@@ -53,7 +53,7 @@ namespace Laboratorium5.Controllers
             return View();
         }
 
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult CreateSong(Piosenka model, int AlbumId)
         {
@@ -64,6 +64,7 @@ namespace Laboratorium5.Controllers
             }
             return View(model);
         }
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult CreateApi()
         {
@@ -71,7 +72,7 @@ namespace Laboratorium5.Controllers
             ViewBag.Albums = new SelectList(albums, "Id", "Nazwa");
             return View(new Album());
         }
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult CreateApi([FromBody] Album album)
         {
@@ -102,7 +103,7 @@ namespace Laboratorium5.Controllers
         {
             return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult Update(int id)
         {
@@ -113,7 +114,7 @@ namespace Laboratorium5.Controllers
             }
             return View(album);
         }
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult Update(Album model)
         {
@@ -125,7 +126,7 @@ namespace Laboratorium5.Controllers
             }
             return View(model);
         }
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult UpdateAlbum(Album model)
         {
@@ -136,7 +137,7 @@ namespace Laboratorium5.Controllers
             }
             return View("Update", model);
         }
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult UpdatePiosenka(List<Piosenka> piosenki)
         {
@@ -151,7 +152,7 @@ namespace Laboratorium5.Controllers
             return View("Update", piosenki);
           
         }
-
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -162,7 +163,7 @@ namespace Laboratorium5.Controllers
             }
             return View(album);
         }
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult ConfirmDelete(int id)
         {

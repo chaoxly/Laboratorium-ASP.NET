@@ -112,7 +112,7 @@ namespace Laboratorium5
             var user = new IdentityUser
             {
                 Id = USER_ID,
-                Email = "user@esei.edu.pl",
+                Email = "user@wsei.edu.pl",
                 EmailConfirmed = true,
                 UserName = "user",
                 NormalizedUserName = "USER",
